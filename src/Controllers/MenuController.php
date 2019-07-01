@@ -5,7 +5,7 @@ namespace Harimayco\Menu\Controllers;
 use Harimayco\Menu\Facades\Menu;
 use Illuminate\Http\Request;
 use App\Http\Requests;
-use App\Http\Controllers\Controller;
+use Illuminate\Routing\Controller;
 use Harimayco\Menu\Models\Menus;
 use Harimayco\Menu\Models\MenuItems;
 
