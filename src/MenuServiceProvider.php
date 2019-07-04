@@ -18,6 +18,8 @@ class MenuServiceProvider extends ServiceProvider
                 require  __DIR__.'/routes.php';
         }
 
+        $this->loadViewsFrom(__DIR__.'/Views', 'wmenu');
+
         $this->publishes([
             __DIR__.'/../config/menu.php'  => config_path('menu.php'),
         ], 'config');
@@ -50,7 +52,6 @@ class MenuServiceProvider extends ServiceProvider
         });
 
         $this->app->make('Harimayco\Menu\Controllers\MenuController');
-        $this->loadViewsFrom(__DIR__.'/views', 'wmenu');
         $this->mergeConfigFrom(
             __DIR__ . '/../config/menu.php', 'menu'
         );
